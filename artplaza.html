@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Art Plaza Hotel</title>
+    <link rel="stylesheet" href="artplaza.css">
+</head>
+<body>
+    <!-- Logo Section -->
+    <header class="top-navbar">
+        <div class="logo">
+            <h1>Art Plaza Hotel</h1>
+        </div>
+    </header>
+
+    <!-- Hotel Image Section -->
+    <div class="hotel-image-container">
+        <img src="image.png" alt="Art Plaza Hotel" class="hotel-image">
+    </div>
+
+    <!-- Tab Navigation (About & Rooms) -->
+    <div class="tab-navigation">
+        <button class="tab-link active" onclick="openTab(event, 'about')">Haqida</button>
+        <button class="tab-link" onclick="openTab(event, 'rooms')">Xonalar</button>
+    </div>
+
+    <!-- About Section (Displayed by default) -->
+    <div id="about" class="tab-content">
+        <h2>Haqida</h2><br>
+        <p>
+            Art Plaza Hotel : Xonalari standard , bir kishilik (single), ikki kishilik (double & twin) , uch kishilik (triple) va oilaviy (family) xonalari bor <br>
+            <br>Address : Yakkasaroy , Muqimiy 44A (Oreintir : Sim-sim , Dudek) <br>
+            <br>Tel raqam : +99895 146-66-88
+        </p>
+        <!-- Adjusted Google Map iframe -->
+        <div class="map-container">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2998.2856607393883!2d69.2391230765622!3d41.28088700259363!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8af53670b503%3A0x55bd39ec32493f1d!2sArt%20Plaza!5e0!3m2!1sen!2s!4v1727992725953!5m2!1sen!2s"
+                width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+    </div>
+
+    <!-- Rooms Section (Room cards) -->
+    <div id="rooms" class="tab-content" style="display:none">
+        
+        <div class="room-cards">
+            <!-- Generate 29 room cards -->
+            <div class="room-card">Room 1</div>
+            <div class="room-card">Room 2</div>
+            <div class="room-card">Room 3</div>
+            <div class="room-card">Room 4</div>
+            <div class="room-card">Room 5</div>
+            <div class="room-card">Room 6</div>
+            <div class="room-card">Room 7</div>
+            <div class="room-card">Room 8</div>
+            <div class="room-card">Room 9</div>
+            <div class="room-card">Room 10</div>
+            <div class="room-card">Room 11</div>
+            <div class="room-card">Room 12</div>
+            <div class="room-card">Room 13</div>
+            <div class="room-card">Room 14</div>
+            <div class="room-card">Room 15</div>
+            <div class="room-card">Room 16</div>
+            <div class="room-card">Room 17</div>
+            <div class="room-card">Room 18</div>
+            <div class="room-card">Room 19</div>
+            <div class="room-card">Room 20</div>
+            <div class="room-card">Room 21</div>
+            <div class="room-card">Room 22</div>
+            <div class="room-card">Room 23</div>
+            <div class="room-card">Room 24</div>
+            <div class="room-card">Room 25</div>
+            <div class="room-card">Room 26</div>
+            <div class="room-card">Room 27</div>
+            <div class="room-card">Room 28</div>
+            <div class="room-card">Room 29</div>
+        </div>
+    </div>
+
+    <!-- Bottom Navigation Bar -->
+    <footer class="bottom-navbar">
+        <div class="navbar">
+            <a href="main.html">
+                <div class="nav-item">
+                    <p>Mehmonxonalar</p>
+                </div>
+            </a>
+            <div class="nav-item">
+                <p>Tasks</p>
+            </div>
+            <div class="nav-item">
+                <p>Staking</p>
+            </div>
+            <div class="nav-item">
+                <p>Boost</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script to switch between tabs -->
+    <script>
+        // Ensure "About" section is displayed by default
+        document.getElementById("about").style.display = "block";
+
+        function openTab(evt, tabName) {
+            // Hide all tab contents
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            // Remove active class from all tab links
+            tablinks = document.getElementsByClassName("tab-link");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            // Show the current tab and add "active" class to the clicked tab
+            document.getElementById(tabName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+    </script>
+</body>
+</html>

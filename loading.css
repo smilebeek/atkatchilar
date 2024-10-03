@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+html, body {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #30004c, #2f0158, #4b0069);
+    background-size: 400% 400%;
+    animation: gradientAnimation 15s ease infinite;
+    color: white;
+}
+
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Main loading container */
+.loading-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* W-Coin logo and tagline */
+.logo-container {
+    text-align: center;
+    opacity: 0;
+    animation: fadeIn 2s forwards;
+}
+
+@keyframes fadeIn {
+    to { opacity: 1; }
+}
+
+.logo {
+    font-size: 48px;
+    color: #FFFFFF;
+    letter-spacing: 2px;
+}
+
+.tagline {
+    font-size: 18px;
+    color: #D3D3D3;
+    margin-top: 10px;
+}
+
+/* Icon section */
+.icons-container {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+    opacity: 0;
+    animation: fadeIn 3s forwards;
+}
+
+.icon {
+    margin: 0 15px;
+}
+
+.icon img {
+    width: 40px; /* Adjust size as needed */
+    height: 40px;
+    transition: transform 0.3s ease;
+}
+
+.icon img:hover {
+    transform: scale(1.1); /* Slight scaling effect on hover */
+}
+
+/* Progress bar */
+.progress-container {
+    width: 80%;
+    margin: 20px auto;
+}
+
+.progress-bar {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 25px;
+    height: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.progress {
+    background-color: #8e44ad;
+    width: 0;
+    height: 100%;
+    border-radius: 25px;
+    animation: loadingAnimation 3s forwards;
+}
+
+@keyframes loadingAnimation {
+    from { width: 0%; }
+    to { width: 100%; }
+}
+
+/* Footer credit */
+.credit {
+    position: absolute;
+    bottom: 10%;
+    text-align: center;
+    font-size: 14px;
+    color: #FFFFFF;
+    opacity: 0;
+    animation: fadeIn 4s forwards;
+}
